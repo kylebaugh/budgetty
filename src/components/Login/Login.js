@@ -26,6 +26,7 @@ class Login extends Component {
       const res = await axios.post('/auth/login', { email, password });
       if (res.data.loggedIn) this.props.history.push('/my-budget');
     } catch (e) {
+      console.log(e)
       alert('Login failed. Please try again.');
     }
   }
